@@ -1,0 +1,26 @@
+{
+  "security_level": "medium",
+  "log_blocked_requests": true,
+  "log_allowed_requests": false,
+  "dashboard_port": 8080,
+  "ml_enabled": true,
+  "detection_threshold": 0.5,
+  "logging": {
+    "database_path": "logs/waf_logs.db",
+    "max_log_size_mb": 100
+  },
+  "threat_types": {
+    "sql_injection": {
+      "enabled": true,
+      "confidence_threshold": 0.8
+    },
+    "xss": {
+      "enabled": true,
+      "confidence_threshold": 0.75
+    },
+    "command_injection": {
+      "enabled": true,
+      "confidence_threshold": 0.85
+    }
+  }
+}
